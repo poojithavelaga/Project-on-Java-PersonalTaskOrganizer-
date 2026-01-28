@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Task Organizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Confetti -->
+<div id="confetti-container"></div>
+
+<!-- Celebration Sound -->
+<audio id="celebrateSound">
+    <source src="https://www.soundjay.com/human/sounds/applause-01.mp3" type="audio/mpeg">
+</audio>
+
+<div class="app">
+    <h1>Personal Task Organizer</h1>
+    <p class="tagline">Turn tasks into achievements ✨</p>
+
+    <!-- TODAY TASKS -->
+    <div class="input-box">
+        <input type="text" id="taskInput" placeholder="Enter today's task">
+        <button onclick="addTask()">Add</button>
+    </div>
+
+    <ul id="taskList"></ul>
+
+    <div class="progress-bar">
+        <div id="progress"></div>
+    </div>
+    <p id="statusText">Add tasks to begin 🚀</p>
+
+    <button class="finish-btn" onclick="finishDay()">Finish Day</button>
+    <button class="finish-btn" onclick="startNewDay()">Start New Day</button>
+
+    <div id="finalMessage"></div>
+
+    <!-- TOMORROW TASKS -->
+    <div id="tomorrowSection">
+        <h2>Tomorrow Task Organizer 🌅</h2>
+        <div class="input-box">
+            <input type="text" id="tomorrowInput" placeholder="Enter tomorrow's task">
+            <button onclick="addTomorrowTask()">Add</button>
+        </div>
+        <ul id="tomorrowList"></ul>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
